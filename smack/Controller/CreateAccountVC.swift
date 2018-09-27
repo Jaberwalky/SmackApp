@@ -25,7 +25,7 @@ class CreateAccountVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+ 
     
     @IBAction func createAccountPressed(_ sender: Any) {
         guard let email = emailTxt.text , emailTxt.text != "" else { return }

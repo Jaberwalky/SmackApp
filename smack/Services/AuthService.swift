@@ -120,6 +120,7 @@ class AuthService {
         
         Alamofire.request(URL_ADD_USER, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header).responseJSON { (response) in
             if response.result.error == nil {
+                
                 guard let data = response.data else { return }
                 let json = try! JSON(data: data)
                 
@@ -130,7 +131,8 @@ class AuthService {
                 let name = json["name"].stringValue
                 
                 UserDataService.instance.setUserData(id: id, color: color, avatarName: avatarName, email: email, name: name)
-                
+                completion(true)
+                    
             } else {
                 completion(false)
                 debugPrint(response.result.error as Any)
