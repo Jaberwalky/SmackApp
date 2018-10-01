@@ -114,7 +114,7 @@
                                     <action selector="loginBtnPressed:" destination="uzz-zB-hJg" eventType="touchUpInside" id="MIR-46-thG"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="8JQ-yg-s6F">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="8JQ-yg-s6F" customClass="CircleImage" customModule="smack" customModuleProvider="target">
                                 <rect key="frame" x="16" y="572" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="lEk-2N-Lb5"/>
@@ -172,6 +172,7 @@
                     </view>
                     <connections>
                         <outlet property="loginBtn" destination="wpU-gb-N0O" id="pvr-ep-Fk1"/>
+                        <outlet property="userImg" destination="8JQ-yg-s6F" id="rXg-Q4-9vZ"/>
                         <segue destination="Xju-ug-oJt" kind="show" identifier="toLogin" id="QEL-Ej-pxq"/>
                     </connections>
                 </viewController>
@@ -223,6 +224,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginPressed:" destination="Xju-ug-oJt" eventType="touchUpInside" id="qKp-3A-NQa"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="RrL-qG-f3d">
                                 <rect key="frame" x="62.5" y="160" width="250" height="86"/>
@@ -273,6 +277,10 @@
                                     <action selector="createAccountBtnPressed:" destination="Xju-ug-oJt" eventType="touchUpInside" id="kD8-fd-Tfa"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ojd-rw-jO5">
+                                <rect key="frame" x="169" y="215" width="37" height="37"/>
+                                <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -286,10 +294,15 @@
                             <constraint firstItem="nKL-RS-7sb" firstAttribute="centerX" secondItem="Q4w-EM-XXU" secondAttribute="centerX" id="hdX-ns-utV"/>
                             <constraint firstItem="2TL-Vh-gR8" firstAttribute="centerX" secondItem="Q4w-EM-XXU" secondAttribute="centerX" id="kyD-Bx-F7H"/>
                             <constraint firstItem="4df-m7-6zA" firstAttribute="centerX" secondItem="Q4w-EM-XXU" secondAttribute="centerX" id="l6y-76-a3a"/>
+                            <constraint firstItem="ojd-rw-jO5" firstAttribute="centerY" secondItem="Q4w-EM-XXU" secondAttribute="centerY" constant="-100" id="qoc-9Y-nhr"/>
+                            <constraint firstItem="ojd-rw-jO5" firstAttribute="centerX" secondItem="Q4w-EM-XXU" secondAttribute="centerX" id="sha-Ee-781"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aDf-qp-QaM"/>
                     </view>
                     <connections>
+                        <outlet property="passwordTxt" destination="X85-lD-VJW" id="jTE-Zq-iBk"/>
+                        <outlet property="spinner" destination="ojd-rw-jO5" id="sBH-I2-Zdr"/>
+                        <outlet property="usernameTxt" destination="F89-4w-Whf" id="YcB-0g-3dl"/>
                         <segue destination="HEY-gQ-nQd" kind="show" identifier="toCreateAccount" id="u7r-Qk-IrM"/>
                     </connections>
                 </viewController>
