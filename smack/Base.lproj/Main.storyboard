@@ -390,7 +390,7 @@
                                 <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="gBd-DC-usa">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="gBd-DC-usa" customClass="CircleImage" customModule="smack" customModuleProvider="target">
                                 <rect key="frame" x="137.5" y="299" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="drb-wn-kqe"/>
@@ -408,6 +408,10 @@
                                     <action selector="pickBGColourPressed:" destination="HEY-gQ-nQd" eventType="touchUpInside" id="yYN-K2-Bgt"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="rXR-2F-CVu">
+                                <rect key="frame" x="169" y="215" width="37" height="37"/>
+                                <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUf-s2-tpE">
                                 <rect key="frame" x="137.5" y="299" width="100" height="130"/>
                                 <constraints>
@@ -426,8 +430,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="q9x-cZ-jDv" firstAttribute="trailing" secondItem="mgA-lh-zi0" secondAttribute="trailing" constant="16" id="5TA-PC-4qZ"/>
+                            <constraint firstItem="rXR-2F-CVu" firstAttribute="centerX" secondItem="d3r-5x-c14" secondAttribute="centerX" id="7If-B0-7y4"/>
                             <constraint firstItem="Mn7-pB-caQ" firstAttribute="top" secondItem="fUf-s2-tpE" secondAttribute="bottom" constant="4" id="AcV-ew-vSv"/>
                             <constraint firstItem="CkG-v9-aiM" firstAttribute="top" secondItem="GNQ-nW-5L5" secondAttribute="bottom" constant="40" id="An2-V0-Jd3"/>
+                            <constraint firstItem="rXR-2F-CVu" firstAttribute="centerY" secondItem="d3r-5x-c14" secondAttribute="centerY" constant="-100" id="FkJ-rY-TH0"/>
                             <constraint firstItem="3Lq-bI-aHe" firstAttribute="centerX" secondItem="d3r-5x-c14" secondAttribute="centerX" id="LEB-t3-3Ae"/>
                             <constraint firstItem="CkG-v9-aiM" firstAttribute="centerX" secondItem="d3r-5x-c14" secondAttribute="centerX" id="Nbv-wL-baa"/>
                             <constraint firstItem="gBd-DC-usa" firstAttribute="top" secondItem="CkG-v9-aiM" secondAttribute="bottom" constant="40" id="RtO-bL-1ig"/>
@@ -446,6 +452,7 @@
                     <connections>
                         <outlet property="emailTxt" destination="VpZ-fV-Yf1" id="Aub-1A-o3b"/>
                         <outlet property="passwordTxt" destination="1tQ-Dp-hCu" id="Gmr-nJ-1HN"/>
+                        <outlet property="spinner" destination="rXR-2F-CVu" id="bnp-Ju-irk"/>
                         <outlet property="userImg" destination="gBd-DC-usa" id="Lnz-sa-Sik"/>
                         <outlet property="userNameTxt" destination="o1Z-HK-dvi" id="jnN-6b-EAK"/>
                         <segue destination="TAJ-CC-Gly" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="cl8-Ff-dC7"/>
@@ -507,7 +514,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A5b-Fk-aBQ">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A5b-Fk-aBQ" customClass="CircleImage" customModule="smack" customModuleProvider="target">
                                                     <rect key="frame" x="10" y="10" width="80" height="80"/>
                                                 </imageView>
                                             </subviews>
