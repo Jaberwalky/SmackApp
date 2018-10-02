@@ -32,6 +32,7 @@
 		6DD6A066215A834900683015 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DD6A065215A834900683015 /* Assets.xcassets */; };
 		6DD6A069215A834900683015 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DD6A067215A834900683015 /* LaunchScreen.storyboard */; };
 		6DF4D2AC21637B370050110F /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF4D2AB21637B370050110F /* SocketService.swift */; };
+		6DF4D2AE2163AB330050110F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF4D2AD2163AB330050110F /* Message.swift */; };
 		E7181E2D585DA6FD940F9D7D /* Pods_smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F7E7243E5969EABB17FC3D /* Pods_smack.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		6DD6A068215A834900683015 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6DD6A06A215A834900683015 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DF4D2AB21637B370050110F /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
+		6DF4D2AD2163AB330050110F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		727344C4EF0DCEE9D8277C90 /* Pods-smack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smack.release.xcconfig"; path = "Pods/Target Support Files/Pods-smack/Pods-smack.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				6D123F5B21626B9D00965474 /* Channel.swift */,
+				6DF4D2AD2163AB330050110F /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				6D986E50215A853000D9D939 /* ChatVC.swift in Sources */,
 				6D156F1A215D23C500C05E04 /* AvatarPickerVC.swift in Sources */,
 				6D156F16215BC75D00C05E04 /* RoundedButton.swift in Sources */,
+				6DF4D2AE2163AB330050110F /* Message.swift in Sources */,
 				6D123F5C21626B9D00965474 /* Channel.swift in Sources */,
 				6D156F1E21621D6200C05E04 /* CircleImage.swift in Sources */,
 				6D123F5A21626B5600965474 /* MessageService.swift in Sources */,
